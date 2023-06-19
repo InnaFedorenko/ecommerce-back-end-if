@@ -10,6 +10,7 @@
 // THEN a development database is created and is seeded with test data
 // WHEN I enter the command to invoke the application
 // THEN my server is started and the Sequelize models are synced to the MySQL database
+
 // WHEN I open API GET routes in Insomnia for categories, products, or tags
 // THEN the data for each of these routes is displayed in a formatted JSON
 // WHEN I test API POST, PUT, and DELETE routes in Insomnia
@@ -19,6 +20,7 @@
 const express = require('express');
 const routes = require('./routes');
 // import sequelize connection
+const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
